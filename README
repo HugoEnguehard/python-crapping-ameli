@@ -1,0 +1,6 @@
+To execute the script py ./main.py 
+
+TODO : 
+  - Put the data in a CSV
+  - Put a loop option to get all the doctors
+  - Put a choice option (input?) to choose what king of doctor to look for and in which department

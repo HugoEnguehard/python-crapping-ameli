@@ -1,0 +1,342 @@
+<!DOCTYPE html><html>
+<head>
+<title>Annuaire santé d'ameli.fr : trouver un médecin, un hôpital...</title><meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta name="description" content="L’annuaire santé de l’Assurance Maladie pour trouver un médecin, un kiné… Tarifs – Horaires – Spécialités - Localisation" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><link href="/resources_ver/20220302095149/css/print_new.css" media="print" rel="stylesheet" type="text/css" />
+<link href="/resources_ver/20220302095149/css/jquery.qtip.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources_ver/20220302095149/css/styles_new.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources_ver/20220302095149/css/ui-lightness/jquery-ui-1.10.3.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Droid+Sans:700,400" media="all" rel="stylesheet" type="text/css" />
+<link href="/resources_ver/20220302095149/css/geoportail.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resources_ver/20220302095149/css/ol3/ol.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resources_ver/20220302095149/css/ol3/GpPluginOl3.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/resources_ver/20220302095149/css/dynafacette.css" media="all" rel="stylesheet" type="text/css" />
+<!--[if IE]><link href="/resources_ver/20220302095149/css/styles_ie_new.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]><link href="/resources_ver/20220302095149/css/styles_ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><script type="text/javascript" src="/resources_ver/20220302095149/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/ol3/ol.uncompressed.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/ol3/GpPluginOl3.uncompressed.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/GpOl3.utils.uncompressed.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/ol3/ol3-popup.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/ol3/ol3-popup.uncompressed.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/jquery.ui.dynafacette.uncompressed.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/jquery.popin.40.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/selectmenu.uncompressed.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/jquery.qtip.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/tarteaucitron/tarteaucitron.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    tarteaucitron.init({
+                "privacyUrl": "",
+                "hashtag": "#tarteaucitron",
+                "cookieName": "tarteaucitron",
+                "orientation": "bottom",
+                "groupServices": false,
+                "showAlertSmall": false,
+                "cookieslist": false,
+                "showIcon": false,
+                "iconSrc": "data:image/png;base64,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",
+                "iconPosition": "BottomLeft",
+                "adblocker": false,
+                "DenyAllCta" : true,
+                "AcceptAllCta" : true,
+                "highPrivacy": true,
+                "handleBrowserDNTRequest": true,
+                "removeCredit": true,
+                "moreInfoLink": true,
+                "useExternalCss": false,
+                "readmoreLink": "",
+                "mandatory": true,
+                "mandatoryCta": true
+            });    //]]>
+</script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/BrowserDetect.js"></script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/scripts.uncompressed.js"></script></head>
+<body>
+<div id="site" >
+	<div id="entete">
+    <a href="/" title=""><img class="logoam" alt="L'Assurance Maladie" src="/resources_ver/20220302095149/images/logo_annuaire_sante.svg"/></a>
+    <div class="acces">
+        <a target="_blank" href="https://assure.ameli.fr">Accéder au compte ameli</a>
+    </div>
+</div>
+	    	<div id="site_inner" >
+                        			<div id="filariane" class="ariane">
+				<p><span><a href="/">Accueil</a></span> &gt; <span><a href="/nouvelle-recherche/professionnels-de-sante.html">Professionnels de santé</a></span> &gt; <span>Résultats de la recherche</span></p>
+			</div>
+			<div class="print-result impression"><a
+            href="/professionnels-de-sante/recherche/liste-resultats-page-1-par_page-20-tri-aleatoire.html?print"
+            target="_blank">Imprimer la liste de résultats</a>
+</div>
+<div class="clear"></div>
+<div class="recapitulatif">
+    <div class="recapitulatif-inner">
+                <div class="infos">
+            <div class="boutons">
+                <a href="/modifier_votre_recherche.html">
+                    <span><span>Modifier votre recherche</span></span>
+                </a>
+                <a href="/nouvelle-recherche/professionnels-de-sante.html"
+                   class="loupe">
+                    <span><span>Nouvelle recherche</span></span>
+                </a>
+            </div>
+            <p class="nombre-resultats">Plus de 1000 résultats correspondent à votre recherche</p>
+            <h1>
+                                    Profession&nbsp;: Médecin généraliste<br />
+                                    Lieu&nbsp;: HERAULT (34)<br />
+                            </h1>
+                            <div class="mention">Dans la liste ci-dessous, ne figurent que
+                    les professionnels de santé qui exercent une activité
+                    libérale et les centres de santé.
+                </div>
+                    </div>
+                    <div class="carte">
+                <a href="/carte.html" class="modaleCarteLink">
+                    <img src="/resources_ver/20220302095149/images/lien_carte.png"
+                         alt="Voir les résultats sur une carte"/>
+                </a>
+            </div>        <div class="clear"></div>
+    </div>
+</div>
+<div class="liste-criteres">
+                        <div class="bloc-critere">
+                <div class="bloc-haut-critere"></div>
+                <a class="infos"
+                   href="/fenetre-modale-xhr/information_facette_type_honoraires.html"><img
+                            src="/resources_ver/20220302095149/images/picto_info.gif"
+                            alt="Infos"/></a>
+                <p>
+                    <img alt="Affichez les professionnels de santé selon le type d’honoraires"
+                         src="/resources_ver/20220302095149/images/picto_euro.png"
+                         class="picto_facette">Affichez les professionnels de
+                    santé selon le type d’honoraires</p>
+                <ul>
+                                                                        <li>
+                                <a href="/recherche-facette/type_honoraires-tarif-sans-depassement.html">
+                                    Honoraires sans dépassement                                    (1377)
+                                </a>
+                            </li>                                                                        <li>
+                                <a href="/recherche-facette/type_honoraires-tarif-encadre.html">
+                                    Honoraires avec dépassements maîtrisés (OPTAM)                                    (22)
+                                </a>
+                            </li>                                                                        <li>
+                                <a href="/recherche-facette/type_honoraires-tarif-libre.html">
+                                    Honoraires libres                                    (20)
+                                </a>
+                            </li>                                                                        <li>
+                                <a href="/recherche-facette/type_honoraires-non-conventionne.html">
+                                    Non conventionné                                    (17)
+                                </a>
+                            </li>                                    </ul>
+                <div class="bloc-bas-critere"></div>
+            </div>
+                
+            <div class="bloc-critere">
+                <div class="bloc-haut-critere"></div>
+                <p>Affichez les professionnels de santé indiquant leurs
+                    horaires</p>
+                <ul>
+                                            <li>
+                            <a href="/recherche-facette/horaires-1.html">
+                                <img src="/resources_ver/20220302095149/images/picto_horaires.png" alt=""/>
+                                <span>Le médecin a indiqué ses horaires (1038)</span>
+                            </a>
+                        </li>
+
+                    
+                        <li>
+                            <a href="/recherche-facette/horairesLibres-true.html">
+                                <img src="/resources_ver/20220302095149/images/horaires_vert.png" alt=""/>
+                                <span>Le médecin consulte sans rendez-vous aujourd'hui (180)</span>
+                            </a>
+                        </li>
+
+                    
+                </ul>
+                <div id="dynafacette"></div>
+                <div class="bloc-bas-critere"></div>
+            </div>
+                
+            <div class="bloc-critere">
+                <div class="bloc-haut-critere"></div>
+                <p>Affichez les professionnels de santé acceptant la carte Vitale</p>
+                <ul>
+                                            <li>
+                            <a href="/recherche-facette/carte_vitale-1.html">
+                                <img src="/resources_ver/20220302095149/images/picto_cartevitale.png" alt=""/>
+                                <span>Avec carte Vitale (1262)</span>
+                            </a>
+                        </li>
+                                    </ul>
+                <div class="bloc-bas-critere"></div>
+            </div>
+                            <div class="bloc-critere">
+                <div class="bloc-haut-critere"></div>
+                <p>Affichez les professionnels de santé exerçant les
+                    professions suivantes</p>
+                <ul>
+                                                <li>
+                            <a href="/recherche-facette/professionLabel-01-41_01-01.html">Généraliste - Acupuncteur                                (26)</a>
+                            </li>                                                    <li>
+                            <a href="/recherche-facette/professionLabel-01-42.html">Généraliste - Allergologue                                (1)</a>
+                            </li>                                                    <li>
+                            <a href="/recherche-facette/professionLabel-01-44_01-05.html">Généraliste - Angiologue                                (30)</a>
+                            </li>                                                    <li>
+                            <a href="/recherche-facette/professionLabel-01-91.html">Généraliste - Échographiste                                (1)</a>
+                            </li>                                                    <li>
+                            <a href="/recherche-facette/professionLabel-01-02_01-60.html">Généraliste - Homéopathe                                (21)</a>
+                            </li>                                                    <li>
+                            <a href="/recherche-facette/professionLabel-01-86.html">Généraliste - Médecin thermaliste                                (3)</a>
+                            </li>                                                    <li>
+                            <a href="/recherche-facette/professionLabel-01-66.html">Généraliste - Médecine appliquée aux sports                                (4)</a>
+                            </li>                                                    <li>
+                            <a href="/recherche-facette/professionLabel-22-00_01-00.html">Médecin généraliste                                (1351)</a>
+                            </li>                                        </ul>
+                <div class="bloc-bas-critere"></div>
+            </div>
+        
+
+        
+            <div class="bloc-critere">
+                <div class="bloc-haut-critere"></div>
+                <p>Affichez les centres de santé</p>
+                <ul>
+                                            <li>
+                            <a href="/recherche-facette/categorie-CENTRE_DE_SANTE.html">
+                                <img src="/resources_ver/20220302095149/images/picto_facette_centre_sante.png" alt=""/>
+                                <span>Centre de santé (6)</span>
+                            </a>
+                        </li>
+                                    </ul>
+                <div class="bloc-bas-critere"></div>
+            </div>
+        
+
+    </div>
+<div class="resultats">
+    <div id="hautcadre"></div>
+    <div id="centrecadre">
+                    <div class="tri">
+                <form id="form_tri" action="/professionnels-de-sante/recherche/liste-resultats-page-1-par_page-20-tri-aleatoire.html">
+                    <label for="tri-haut">Trier par</label>
+                    <select id="form_tri_select" name="sorting"
+                            onchange="document.getElementById('form_tri').submit()">
+                        <option value="aleatoire"> - </option>                            <option value="nom_asc">Nom</option>
+                                                    <option value="adresse_asc">Code Postal</option>
+                                                    <option value="profession_asc">Profession</option>
+                                                    <option value="carte-vitale_desc">Carte Vitale</option>
+                                                    <option value="secteur_asc">Type d&#039;honoraires</option>
+                                            </select>
+                    <button type="submit" title="Trier" class="boutons"><a
+                                href="#"><span><span>Trier</span></span></a>
+                    </button>
+                </form>
+            </div>
+            <div class="pagination">
+	<form method="post" action="/professionnels-de-sante/recherche/liste-resultats-page-1-par_page-20-tri-aleatoire.html">
+
+		
+		Page <input type="text" name="pageCible" value="1" /> sur 50
+					<a href="/professionnels-de-sante/recherche/liste-resultats-page-2-par_page-20-tri-aleatoire.html">
+				<img src="/resources_ver/20220302095149/images/pagination_next.png" alt="Page suivante" />
+			</a>
+			<a href="/professionnels-de-sante/recherche/liste-resultats-page-50-par_page-20-tri-aleatoire.html">
+				<img src="/resources_ver/20220302095149/images/pagination_last.png" alt=" - Aller à la dernière page" />
+			</a>
+		
+	</form>
+</div>
+        
+        <div class="clear"></div>
+        <div class="liste-professionnel">
+                        <div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">1</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1lDEzODaw.html"><strong>CHERIF BECK</strong> SORAYA</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">SCP LAMBERT CABOT DEDIEU BERNIER<br />10 RUE GABRIEL PERI<br />34200 SETE</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">2</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kjM1NjSy.html"><strong>MAISONNEUVE</strong> CAROLINE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">04&nbsp;67&nbsp;48&nbsp;26&nbsp;06</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CAB DU DR CAROLINE MAISONNEUVE<br />LOU PATIO<br />7 AVENUE FREDERIC MISTRAL<br />34110 FRONTIGNAN</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">3</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kjMzMTux.html"><strong>BRUCHET LACAZIN</strong> SEVERINE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR SEVERINEBRUCHET LACAZIN<br />SCM LES TILLEULS<br />15 ROUTE DE LAVERUNE<br />34990 JUVIGNAC</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">4</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kjY5ODGx.html"><strong>RAHAL</strong> FATIMA</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR FATIMA RAHAL<br />5 COURS GAMBETTA<br />34000 MONTPELLIER</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">5</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kzM0Mzuw.html"><strong>LAVIT</strong> PASCAL</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">04&nbsp;67&nbsp;59&nbsp;00&nbsp;54</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR PASCAL LAVIT<br />36 PLACE DU STADE<br />34270 CLARET</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">6</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kjE3MzK7.html"><strong>FEHR</strong> VALENTINE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR CHRISTELLE CHARLES<br />SCM SAUMADE<br />285 AVENUE REPUBLIQUE DE MONTFERRAND<br />34270 ST MATHIEU DE TREVIERS</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">7</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kzA2MDS0.html"><strong>HUGODOT</strong> CAPUCINE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR CAPUCINE HUGODOT<br />SCM CAB MEDICAL OLYMPIE<br />2 ALLEE FRANCK CHESNEAU<br />34160 BEAULIEU</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">8</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1mjc1Njez.html"><strong>PELLEQUER</strong> NANCY</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CAB DR NANCY PELLEQUER<br />CENTRE MEDICAL ACHILLE<br />230 AVENUE DES PRES D ARENES<br />34070 MONTPELLIER</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">9</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kzMwNzSx.html"><strong>LAKROUN</strong> KARIM</a></h2><div class="pictos"><img alt="Ce professionnel de santé reçoit aujourd'hui sans rendez-vous." src="/resources_ver/20220302095149/images/horaires_vert.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">06&nbsp;24&nbsp;18&nbsp;71&nbsp;23</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR KARIM LAKROUN<br />560 AVENUE DU COLONEL ANDRE PAVELET<br />34000 MONTPELLIER</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">10</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kjY2Mza6.html"><strong>BERTHEZ</strong> VINCENT</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR VINCENT BERTHEZ<br />CABINET MEDICAL DE PINET<br />PLACE PIERRE THIEULE<br />34850 PINET</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">11</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kzMxNTS1.html"><strong>CLARA</strong> CARINE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">09&nbsp;70&nbsp;66&nbsp;73&nbsp;67</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR CARINE CLARA<br />RES JEAN DE LA FONTAINE<br />31 RUE PREVOT D AUGIER<br />34200 SETE</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">12</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kjI3MTOw.html"><strong>NGUYEN</strong> THI LE THAO</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">04&nbsp;99&nbsp;65&nbsp;46&nbsp;63</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR THI LE THAO NGUYEN<br />CTRE MED HAUTS BOUTONNET<br />28 AVENUE DU PROFESSEUR GRASSET<br />34090 MONTPELLIER</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">13</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kzI3OTSz.html"><strong>BOURGEOIS</strong> DOMINIQUE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé reçoit aujourd'hui sans rendez-vous." src="/resources_ver/20220302095149/images/horaires_vert.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">09&nbsp;52&nbsp;14&nbsp;66&nbsp;30</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">109 PLACE DE THESSALIE<br />34000 MONTPELLIER</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">14</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kzAyOTS0.html"><strong>LECLUSE</strong> ROMAIN</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">04&nbsp;67&nbsp;72&nbsp;22&nbsp;15</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR ROMAIN LECLUSE<br />790 RUE BONADONA<br />34470 PEROLS</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">15</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1lTIwNjOx.html"><strong>GALLAUX</strong> MARTINE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">SELARL GALLAUX<br />RES LE CORAIL<br />490 AVENUE DES CROISADES<br />34280 LA GRANDE MOTTE</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">16</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kjMwOTq7.html"><strong>PERUS</strong> EMMANUELLE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">04&nbsp;67&nbsp;27&nbsp;03&nbsp;95</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR EMMANUELLE PERUS<br />SCM MULTIDOC<br />7 RUE DE LA CROIX<br />34880 LAVERUNE</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">17</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kzIyODG0.html"><strong>LACUGUE</strong> ARNAUD</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left tel">04&nbsp;67&nbsp;79&nbsp;11&nbsp;10</div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR ARNAUD LACUGUE<br />RESIDENCE DU SABLASSOU<br />470 CHEMIN DU SABLASSOU<br />34170 CASTELNAU LE LEZ</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">18</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1kjI1Nzew.html"><strong>RIBAUT</strong> AURELIE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/><img alt="Ce professionnel de santé a indiqué ses horaires" src="/resources_ver/20220302095149/images/horaires_gris.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CABINET DU DR AURELIE RIBAUT<br />CENTRE MEDICAL ODYSSEUM<br />194 AVENUE NINA SIMONE<br />34000 MONTPELLIER</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">19</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1mjY1MzWz.html"><strong>BOUCHENAKI</strong> SAMIA</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">CAB DU DR SAMIA BOUCHENAKI<br />CLINIQUE ST LOUIS<br />PLACE JOSEPH BOUDOURESQUES<br />34190 GANGES</div><div class="clear"></div></div><div class="clear"></div></div></div><div class="item-professionnel"><div class="item-professionnel-inner"><span class="num">20</span><div class="nom_pictos"><h2 class="ignore-css"><a href="/professionnels-de-sante/recherche/fiche-detaillee-A7Y1mjExOTqw.html"><strong>GAILLARD</strong> ANNIE</a></h2><div class="pictos"><img alt="Ce professionnel de santé accepte la carte Vitale" src="/resources_ver/20220302095149/images/picto_cartevitale.png" class="infobulle"/></div><div class="clear"></div></div><div class="clear"></div><div class="elements"><div class="item left specialite">Médecin généraliste - Allergologue en mode d'exercice particulier</div><div class="item right type_honoraires">Honoraires sans dépassement</div><div class="clear"></div><div class="item left"></div><div class="item right convention"><a href="#" class="infobulle" alt="Les médecins appliquent les tarifs fixés dans la convention nationale sans dépassements d’honoraires (dits tarifs conventionnels, opposables ou de secteur 1). Ces tarifs servent de base au remboursement de l’Assurance Maladie. Des dépassements d’honoraires ne peuvent être facturés qu’à titre exceptionnel, pour des motifs liés, par exemple à des exigences de temps ou de lieu du patient (DE). Ces dépassements ne sont pas remboursés par l’Assurance Maladie, que vous soyez dans le parcours de soins ou non." >Conventionné secteur 1</a></div><div class="clear"></div><div class="item left adresse">24B ROUTE DE MONTPELLIER<br />34430 ST JEAN DE VEDAS</div><div class="clear"></div></div><div class="clear"></div></div></div>        </div>
+                    <div class="tri">
+                <form id="form_tri_bas" action="">
+                    <label for="form_tri_select">Trier par</label>
+                    <select id="form_tri_select" name="sorting"
+                            onchange="document.getElementById('form_tri_bas').submit()">
+                        <option value="aleatoire"> - </option>                            <option value="nom_asc">Nom</option>
+                                                    <option value="adresse_asc">Code Postal</option>
+                                                    <option value="profession_asc">Profession</option>
+                                                    <option value="carte-vitale_desc">Carte Vitale</option>
+                                                    <option value="secteur_asc">Type d&#039;honoraires</option>
+                                            </select>
+                </form>
+            </div>
+                <div class="pagination">
+	<form method="post" action="/professionnels-de-sante/recherche/liste-resultats-page-1-par_page-20-tri-aleatoire.html">
+
+		
+		Page <input type="text" name="pageCible" value="1" /> sur 50
+					<a href="/professionnels-de-sante/recherche/liste-resultats-page-2-par_page-20-tri-aleatoire.html">
+				<img src="/resources_ver/20220302095149/images/pagination_next.png" alt="Page suivante" />
+			</a>
+			<a href="/professionnels-de-sante/recherche/liste-resultats-page-50-par_page-20-tri-aleatoire.html">
+				<img src="/resources_ver/20220302095149/images/pagination_last.png" alt=" - Aller à la dernière page" />
+			</a>
+		
+	</form>
+</div>
+        <div class="clear"></div>
+    </div>
+    <div id="bascadre"></div>
+</div>
+<div class="clear"></div>
+		</div>
+	<div id="footer">
+		<div class="mention">L'utilisation du service offert sur ce site est soumise au respect des conditions d'utilisation. Toute reproduction intégrale ou partielle des contenus, données et informations disponibles est illicite et peut donner lieu à des sanctions.</div>
+		<div class="liens">
+			<div class="titre"></div>
+            <div class="site">
+                <a target="_blank" href="https://www.ameli.fr"><img src="/resources_ver/20220302095149/images/footer_ameli.svg" alt="ameli.fr" /><br/><br/></a>
+                <a target="_blank" href="https://www.ameli.fr">Le site de l’Assurance Maladie en ligne</a>
+            </div>
+            <div class="mise-a-dispo-donnees">
+                Dans le cadre de la politique d'ouverture et de partage des
+                données publiques, les informations présentées sur ce site sont
+                désormais disponibles sur la plateforme data.gouv.fr. Elles sont
+                réutilisables sous réserve du respect des dispositions
+                réglementaires relatives à la protection des données
+                personnelles. Les demandes d’exercice de droits des personnes
+                concernées (accès, rectification, opposition le cas échéant)
+                sont à adresser au directeur du programme annuaire-santé, à la
+                Cnam, Direction de l'Offre de Soins, 50 Avenue du Professeur
+                André Lemierre, 75020 Paris.
+            </div>
+		</div>
+		<div class="clear"></div>
+		<div class="liens-transverse">
+            <a href="/trouver-un-professionnel-de-sante/" class="thickbox firstLink" title="Trouver un professionnel de santé">Liste des professionnels de santé</a>
+            <a href="/fenetre-modale-xhr/mentions_legales_et_cgu.html?width=700&amp;modal=true" class="thickbox" rel="nofollow" title="Mentions légales et CGU">Mentions légales et CGU</a>
+            <a href="/fenetre-modale-xhr/protection_donnees_personnelles.html?width=700&amp;modal=true" class="thickbox" rel="nofollow" title="Protection des données personnelles">Protection des données personnelles</a>
+            <a href="/" onclick="tarteaucitron.userInterface.openPanel(); return false;" title="Gestion des cookies">Gestion des cookies</a>
+            <a href="https://www.data.gouv.fr/fr/datasets/annuaire-sante-de-la-cnam/" target="_blank">data.gouv.fr</a>
+        </div>
+	</div>
+</div>
+
+<!--  -->
+<script type="text/javascript">
+    //<![CDATA[
+    					$(document).ready(function() {
+						$('#dynafacette').dynafacette({
+							values: {"days":[],"hours":[0,24],"types":[]},
+							url: "/recherche-dynafacette/horairesDynamiques.html",
+							lockType: false
+						});
+					});    //]]>
+</script>
+<script type="text/javascript">
+  xtnv = document;
+  xtsd = "https://logi7";
+  xtsite = "475098";
+  xtn2 = "2";
+  xtpage = "ameli-direct-externe::liste-resultats-ps";
+  xtdi = "";
+</script>
+<script type="text/javascript" src="/resources_ver/20220302095149/js/xtcore.js"></script>
+<noscript>
+  <img width="1" height="1" alt="" src="https://logi7.xiti.com/hit.xiti?s=475098&amp;s2=1&amp;p=ameli-direct-externe::liste-resultats-ps&amp;di=&amp;" />
+</noscript></body>
+</html>
